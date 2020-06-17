@@ -13,7 +13,7 @@ services:
         "spring.datasource.password": "budget-app"
      }'
     ports:
-      - "8080:8080"
+      - "8085:8085"
 
   budget-db:
     image: mysql:8.0.13

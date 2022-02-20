@@ -21,3 +21,9 @@ services:
       MYSQL_DATABASE: budget
     ports:
       - "3306:3306"
+
+  budget-app:
+    image: ghcr.io/cyrill10/budget.app:latest
+    restart: always
+    ports:
+      - "80:8086"

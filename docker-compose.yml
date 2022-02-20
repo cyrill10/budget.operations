@@ -26,4 +26,4 @@ services:
     image: ghcr.io/cyrill10/budget.app:latest
     restart: always
     ports:
-      - "8086:80"
+      - "80:8086"

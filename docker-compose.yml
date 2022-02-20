@@ -9,8 +9,8 @@ services:
       SPRING_APPLICATION_JSON: '{
         "spring.jpa.hibernate.ddl-auto": "update",
         "spring.datasource.url": "jdbc:mysql://budget-db:3306/budget?useLegacyDatetimeCode=false",
-        "spring.datasource.username": ${SERVER.DATABASE.USERNAME},
-        "spring.datasource.password": ${SERVER.DATABASE.PASSWORD}
+        "spring.datasource.username": "${SERVER.DATABASE.USERNAME}",
+        "spring.datasource.password": "${SERVER.DATABASE.PASSWORD}"
      }'
     ports:
       - "8085:8085"

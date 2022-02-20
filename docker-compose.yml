@@ -10,8 +10,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://budget-db:3306/budget?useLegacyDatetimeCode=false
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: "${DB_PASSWORD}"
-      AUTH_USERNAME: "${AUTH_USERNAME}"
-      AUTH_PASSWORD: "${AUTH_PASSWORD}"
+      auth_username: "${AUTH_USERNAME}"
+      auth_password: "${AUTH_PASSWORD}"
     ports:
       - "8085:8085"
 

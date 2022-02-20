@@ -6,12 +6,10 @@ services:
     image: ghcr.io/cyrill10/budget.server:latest
     restart: always    
     environment:
-      SPRING_APPLICATION_JSON: '{
-        "spring.jpa.hibernate.ddl-auto": "update",
-        "spring.datasource.url": "jdbc:mysql://budget-db:3306/budget?useLegacyDatetimeCode=false",
-        "spring.datasource.username": "${SERVER.DATABASE.USERNAME}",
-        "spring.datasource.password": "${SERVER.DATABASE.PASSWORD}"
-     }'
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+      SPRING_DATASOURCE_URL: jdbc:mysql://budget-db:3306/budget?useLegacyDatetimeCode=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ${DB.PASSWORD}
     ports:
       - "8085:8085"
 
@@ -19,7 +17,7 @@ services:
     image: mysql:8.0.13
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB.ROOT.PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB.PASSWORD}
       MYSQL_DATABASE: budget
     ports:
       - "3306:3306"

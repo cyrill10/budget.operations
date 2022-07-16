@@ -1,25 +1,13 @@
 version: '3'
 
 services:
-
   budget-server:
     image: ghcr.io/cyrill10/budget.server:latest
     restart: always    
     environment:
-      SPRING_JPA_HIBERNATE_DDL-AUTO: update
-      SPRING_DATASOURCE_URL: jdbc:mysql://budget-db:3306/budget?useLegacyDatetimeCode=false
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: "${DB_PASSWORD}"
+      SPRING_DATA_MONGODB_DATABASE: budget
+      SPRING_DATA_MONGODB_URI: "${MONGO_URI}"
       auth_username: "${AUTH_USERNAME}"
       auth_password: "${AUTH_PASSWORD}"
     ports:
-      - "8085:8085"
-
-  budget-db:
-    image: mysql:8.0.13
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
-      MYSQL_DATABASE: budget
-    ports:
-      - "3306:3306"
+      - "8085:8080"

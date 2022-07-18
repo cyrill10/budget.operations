@@ -1,5 +1,5 @@
 #!/bin/sh
-export $(grep -v '^#' .env | xargs)
+export $(grep -v '^#' /home/budget-server/.env | xargs)
 echo ${MONGO_URI_WITH_DATABASE}
 
 mongoexport --uri=${MONGO_URI_WITH_DATABASE} --forceTableScan -o /home/budget-server/dumps/realAccount_`date '+%Y-%m-%d'`.txt -c realAccount --jsonArray

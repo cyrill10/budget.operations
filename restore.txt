@@ -1,0 +1,5 @@
+mongoimport --uri="URI" --file /Users/cyrillbader/Dropbox/Apps/Budget-App-Dumps/realAccount_???????.txt -c realAccount --jsonArray
+mongoimport --uri="URI" --file /Users/cyrillbader/Dropbox/Apps/Budget-App-Dumps/virtualAccount_???????.txt -c virtualAccount --jsonArray
+mongoimport --uri="URI" --file /Users/cyrillbader/Dropbox/Apps/Budget-App-Dumps/transaction_???????.txt -c transaction --jsonArray
+mongoimport --uri="URI" --file /Users/cyrillbader/Dropbox/Apps/Budget-App-Dumps/closingProcess_???????.txt -c closingProcess --jsonArray
+mongoimport --uri="URI" --file /Users/cyrillbader/Dropbox/Apps/Budget-App-Dumps/scannedTransaction_???????.txt -c scannedTransaction --jsonArray
